@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GARDEN Concursos - Material em PDF para Agente da Polícia Federal</title>
+    <title>GARDEN Concursos - Material em PDF para Professor Docente II - Arraial do Cabo RJ</title>
     <style>
         * {
             margin: 0;
@@ -116,7 +116,7 @@
         .hero-description {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             animation: fadeInUp 1s ease 0.4s both;
@@ -128,7 +128,7 @@
             border-radius: 15px;
             padding: 1.5rem;
             margin: 2rem auto;
-            max-width: 500px;
+            max-width: 600px;
             animation: fadeInUp 1s ease 0.5s both;
         }
 
@@ -247,7 +247,7 @@
 
         .subjects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 3rem;
         }
@@ -379,17 +379,52 @@
             z-index: 10;
         }
 
-        .price {
-            font-size: 5rem;
+        .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .old-price {
+            font-size: 2rem;
+            color: #999;
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .new-price {
+            font-size: 4rem;
             color: #1E6B4F;
             font-weight: 900;
-            margin: 1.5rem 0;
             text-shadow: 2px 2px 4px rgba(30, 107, 79, 0.2);
             background: linear-gradient(135deg, #1E6B4F, #2c8f6f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1;
+        }
+
+        .discount-badge {
+            background: linear-gradient(135deg, #dc3545, #e74c3c);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-left: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        .coupon-code {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            border: 2px dashed #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .price-subtitle {
@@ -447,50 +482,6 @@
             background: linear-gradient(135deg, #2c8f6f, #1E6B4F);
             transform: translateY(-2px);
         }
-
-        /* AI Technology Section */
-        .ai-technology {
-            padding: 4rem 2rem;
-            background: white;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .ai-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0 1rem;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .ai-title {
-            font-size: 1.8rem;
-            color: #1E6B4F;
-            margin-bottom: 2rem;
-        }
-
-        .ai-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .ai-feature {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
-            border-left: 3px solid #1E6B4F;
-        }
-
-        .ai-feature h4 {
-            color: #1E6B4F;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-
 
         /* Final CTA */
         .final-cta {
@@ -630,7 +621,7 @@
                 padding: 0 1rem;
             }
             
-            .subjects, .features, .pricing, .final-cta, .ai-technology {
+            .subjects, .features, .pricing, .final-cta {
                 padding: 3rem 1rem;
             }
             
@@ -669,8 +660,28 @@
                 top: 15px;
             }
             
-            .price {
-                font-size: 3.5rem;
+            .price-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .old-price {
+                font-size: 1.5rem;
+            }
+            
+            .new-price {
+                font-size: 3rem;
+            }
+            
+            .discount-badge {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .coupon-code {
+                font-size: 1rem;
+                padding: 0.8rem 1rem;
             }
             
             .price-subtitle {
@@ -690,19 +701,6 @@
                 display: block;
                 font-size: 1rem;
                 padding: 0.8rem 1rem;
-            }
-            
-            .ai-features {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .ai-feature {
-                padding: 0.8rem;
-            }
-            
-            .ai-title {
-                font-size: 1.4rem;
             }
             
             .final-cta h2 {
@@ -739,8 +737,8 @@
                 font-size: 1.8rem;
             }
             
-            .price {
-                font-size: 3rem;
+            .new-price {
+                font-size: 2.5rem;
             }
             
             .pricing-card::before {
@@ -808,7 +806,6 @@
 <body>
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Header -->
     <header class="header">
         <nav class="nav">
             <div class="logo">GARDEN CONCURSOS</div>
@@ -821,24 +818,24 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Material em PDF Completo</h1>
-            <p class="hero-subtitle">🎯 AGENTE DA POLÍCIA FEDERAL - CEBRASPE 2025</p>
+            <p class="hero-subtitle">🎯 PROFESSOR DOCENTE II - ARRAIAL DO CABO RJ 2025</p>
             <p class="hero-description">
-                Material em PDF específico para o concurso da Polícia Federal 2025, baseado no edital da CEBRASPE.
-                Todas as matérias do edital cobertas com foco nos padrões da banca organizadora.
+                Material em PDF 100% alinhado ao edital IBAM 2025 para o concurso de Professor Docente II.
+                Conquiste sua aprovação no concurso mais aguardado do RJ!
             </p>
             
             <div class="urgency-box">
-                <h3>⚡ AINDA DÁ TEMPO!</h3>
-                <p><strong>Inscrições:</strong> Até 17 de junho de 2025</p>
-                <p><strong>Prova:</strong> 27 de julho de 2025</p>
+                <h3>🏆 CONCURSO HISTÓRICO!</h3>
+                <p><strong>Primeiro concurso em 9 anos</strong> = baixa concorrência</p>
+                <p><strong>150 vagas + CR</strong> - Estabilidade no serviço público!</p>
+                <p><strong>Região dos Lagos</strong> - Qualidade de vida incomparável!</p>
             </div>
 
             <div class="countdown">
-                <p><strong>Tempo restante para as provas:</strong></p>
+                <p><strong>Tempo restante para a prova:</strong></p>
                 <div class="countdown-timer" id="countdownTimer">
                     <div class="countdown-item">
                         <div class="countdown-number" id="days">--</div>
@@ -855,224 +852,225 @@
                 </div>
             </div>
             
-            <a href="https://go.hotmart.com/N100386370Y?dp=1" target="_blank" class="cta-button">🎯 GARANTIR MATERIAL</a>
-            <a href="amostra-gratis/NOÇÕES_DE_DIREITO_ADMINISTRATIVO_-_Agentes_públicos.pdf" target="_blank" class="cta-button cta-secondary" >📄 VER AMOSTRA GRÁTIS</a>
+            <a href="#preco" class="cta-button">🎯 GARANTIR MATERIAL</a>
+            <a href="./amostra-gratis/Professor_B_(Educação_Infantil_e_Anos_Iniciais_do_Ensino_Fundamental)_-_Atendimento_educacional_aos_alunos_com_deficiência.pdf" class="cta-button cta-secondary" download>📖 BAIXAR AMOSTRA GRÁTIS</a>
         </div>
     </section>
 
-    <!-- Subjects Section -->
     <section class="subjects" id="materias">
         <div class="subjects-container">
-            <h2 class="section-title">Todas as Matérias do Edital Cobertas</h2>
+            <h2 class="section-title">Disciplinas Cobertas</h2>
             <div class="subjects-grid">
                 <div class="subject-card">
                     <h3>📝 LÍNGUA PORTUGUESA</h3>
-                    <p>Interpretação de textos, gramática, sintaxe e redação oficial</p>
+                    <p>Interpretação, gramática aplicada, ortografia e redação oficial focada na banca.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>⚖️ NOÇÕES DE DIREITO ADMINISTRATIVO</h3>
-                    <p>Princípios, atos administrativos, licitações e contratos</p>
+                    <h3>🎓 FUNDAMENTOS DA EDUCAÇÃO</h3>
+                    <p>História da educação, teorias pedagógicas e filosofia educacional.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>🏛️ NOÇÕES DE DIREITO CONSTITUCIONAL</h3>
-                    <p>Princípios fundamentais, direitos e garantias, organização do Estado</p>
+                    <h3>🧠 PSICOLOGIA DA APRENDIZAGEM</h3>
+                    <p>Desenvolvimento cognitivo, teorias de aprendizagem e neuropsicologia.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>⚖️ DIREITO PENAL E PROCESSUAL PENAL</h3>
-                    <p>Teoria geral do crime, penas, processo penal e investigação</p>
+                    <h3>🤝 EDUCAÇÃO INCLUSIVA</h3>
+                    <p>Legislação específica, adaptações curriculares e necessidades especiais.</p>
+                </div>
+                
+                <div class="subject-card">
+                    <h3>📚 LEGISLAÇÃO EDUCACIONAL</h3>
+                    <p>LDB, ECA, BNCC, Diretrizes Curriculares e legislação atualizada.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>👥 DIREITOS HUMANOS</h3>
-                    <p>Declarações, tratados internacionais e aplicação prática</p>
+                    <h3>🏛️ LEGISLAÇÃO MUNICIPAL</h3>
+                    <p>Estatuto dos Servidores, Plano de Cargos e legislação local relevante.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>📚 LEGISLAÇÃO ESPECIAL</h3>
-                    <p>Leis específicas da área policial e segurança pública</p>
+                    <h3>👶 DIDÁTICA - ED. INFANTIL</h3>
+                    <p>Metodologias específicas, desenvolvimento infantil e práticas pedagógicas.</p>
                 </div>
 
                 <div class="subject-card">
-                    <h3>📊 ESTATÍSTICA</h3>
-                    <p>Probabilidade, análise de dados e estatística descritiva</p>
-                </div>
-
-                <div class="subject-card">
-                    <h3>🧠 RACIOCÍNIO LÓGICO</h3>
-                    <p>Lógica proposicional, argumentação e resolução de problemas</p>
-                </div>
-
-                <div class="subject-card">
-                    <h3>💻 INFORMÁTICA</h3>
-                    <p>Sistemas operacionais, Office, internet e segurança</p>
-                </div>
-
-                <div class="subject-card">
-                    <h3>💰 CONTABILIDADE GERAL</h3>
-                    <p>Patrimônio, demonstrações contábeis e análise financeira</p>
+                    <h3>📖 DIDÁTICA - ANOS INICIAIS</h3>
+                    <p>Alfabetização, letramento, metodologias ativas e avaliação da aprendizagem.</p>
                 </div>
             </div>
 
             <div class="complete-coverage">
-                <h3>✅ 100% DO EDITAL COBERTO</h3>
-                <p>Nosso material abrange todos os pontos do edital oficial da CEBRASPE, garantindo que você não perca nenhum tópico importante para sua aprovação no concurso da Polícia Federal.</p>
+                <h3>✅ 100% DO EDITAL IBAM COBERTO</h3>
+                <p>Nosso material abrange todos os pontos do edital oficial da IBAM, garantindo que você não perca nenhum tópico importante para sua aprovação como Professor Docente II em Arraial do Cabo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features" id="diferenciais">
         <div class="features-container">
-            <h2 class="section-title">Por que nosso material é diferente?</h2>
+            <h2 class="section-title">Diferenciais Exclusivos</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3>Específico para CEBRASPE</h3>
-                    <p>Material desenvolvido especificamente para o padrão da CEBRASPE, conhecendo as características únicas desta banca organizadora.</p>
+                    <h3>Específico para IBAM</h3>
+                    <p>Material desenvolvido para o padrão da IBAM, conhecendo as características e o perfil da banca.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Baseado em Provas Anteriores</h3>
-                    <p>Análise de questões dos últimos concursos da PF organizados pela CEBRASPE para identificar padrões e tendências.</p>
+                    <div class="feature-icon">🏆</div>
+                    <h3>Foco no Cargo</h3>
+                    <p>Conteúdo direcionado para Professor Docente II, sem material desnecessário que não cai na prova.</p>
                 </div>
-
                 <div class="feature-card">
                     <div class="feature-icon">📚</div>
-                    <h3>Teoria + Prática</h3>
-                    <p>Conteúdo teórico completo complementado com questões comentadas no estilo CEBRASPE.</p>
+                    <h3>Exercícios Estratégicos</h3>
+                    <p>Questões no padrão IBAM com gabaritos comentados e análise do perfil da banca.</p>
                 </div>
-
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Foco nas Pegadinhas</h3>
-                    <p>Identificação e explicação das principais armadilhas que a CEBRASPE costuma usar nas questões.</p>
+                    <h3>Resumos e Dicas</h3>
+                    <p>Resumos esquematizados para facilitar a revisão e dicas de estudo personalizadas.</p>
                 </div>
-
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
                     <h3>PDF Otimizado</h3>
-                    <p>Material em PDF com design profissional, organizado e otimizado para estudo em qualquer dispositivo.</p>
+                    <p>Material com design profissional, organizado e otimizado para estudo em qualquer dispositivo.</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Sempre Atualizado</h3>
-                    <p>Conteúdo atualizado conforme as mudanças legislativas e jurisprudenciais mais recentes.</p>
+                    <div class="feature-icon">📱</div>
+                    <h3>Acesso Imediato</h3>
+                    <p>Receba o material instantaneamente em seu e-mail após a confirmação da compra.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
     <section class="pricing" id="preco">
         <div class="pricing-container">
             <h2 class="section-title">Invista na sua Aprovação</h2>
             <div class="pricing-card">
-                <h3>Material Completo em PDF</h3>
+                <h3>Material Completo em PDF - Professor Docente II</h3>
                 
-                <!-- Destaque do Preço -->
-                <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 1.5rem; border-radius: 15px; margin: 1rem 0; border: 2px solid #FFD700;">
-                    <div style="color: #666; font-size: 1rem; margin-bottom: 0.5rem;">💰 PREÇO ESPECIAL</div>
-                    <div class="price">R$ 59,90</div>
-                    <div style="color: #1E6B4F; font-weight: bold; font-size: 1.1rem;">✨ Economia de mais de 90% comparado a cursos tradicionais!</div>
+                <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 15px; margin: 1.5rem 0; border: 2px solid #FFD700;">
+                    <div style="color: #666; font-size: 1rem; margin-bottom: 1rem;">💰 PREÇO PROMOCIONAL</div>
+                    <div class="price-container">
+                        <span class="old-price">R$ 49,90</span>
+                        <span class="new-price">R$ 39,90</span>
+                        <span class="discount-badge">20% OFF</span>
+                    </div>
+                    <div class="coupon-code">
+                        🎟️ Use o cupom: <strong>QUEROSERAPROVADO</strong>
+                    </div>
+                    <div style="color: #1E6B4F; font-weight: bold; font-size: 1.1rem;">✨ Economia garantida + material específico para IBAM!</div>
                 </div>
                 
-                <p class="price-subtitle">Pagamento único - Acesso imediato</p>
+                <p class="price-subtitle">Pagamento único - Acesso vitalício</p>
                 <ul class="price-features">
-                    <li>Material completo para todas as 10 matérias do edital</li>
-                    <li>Baseado no padrão específico da CEBRASPE</li>
-                    <li>Questões comentadas estilo banca</li>
-                    <li>PDF otimizado para estudo digital</li>
-                    <li>Índice navegável por matéria</li>
-                    <li>Dicas de estudo específicas para PF</li>
-                    <li>Acesso vitalício ao material</li>
+                    <li>Apostilas completas de todas as matérias</li>
+                    <li>Legislação educacional 100% atualizada</li>
+                    <li>Questões comentadas no estilo da banca</li>
+                    <li>Simulados por disciplina</li>
+                    <li>Resumos esquematizados para revisão</li>
+                    <li>Foco em Educação Infantil e Anos Iniciais</li>
                     <li>Suporte para dúvidas via WhatsApp</li>
                 </ul>
-                <a href="https://go.hotmart.com/N100386370Y?dp=1" target="_blank" class="price-button" style="text-decoration: none; display: inline-block;">🛒 COMPRAR AGORA</a>
-                <a href="amostra-gratis/NOÇÕES_DE_DIREITO_ADMINISTRATIVO_-_Agentes_públicos.pdf" target="_blank" class="price-button cta-secondary" >📄 VER AMOSTRA PRIMEIRO</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sample Section -->
-    <section class="features" id="amostra">
-        <div class="features-container">
-            <h2 class="section-title">📄 Amostra Grátis do Material</h2>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                    Veja uma amostra do nosso material para conhecer a qualidade e o padrão do conteúdo antes de adquirir o material completo.
-                </p>
-                <a href="amostra-gratis/NOÇÕES_DE_DIREITO_ADMINISTRATIVO_-_Agentes_públicos.pdf" target="_blank" class="price-button" style="max-width: 300px; text-decoration: none; display: inline-block;">📥 BAIXAR AMOSTRA GRÁTIS</a>
+                <a href="https://go.hotmart.com/O101455802V" onclick="alert('Aplicar cupom QUEROSERAPROVADO no checkout')" class="price-button" style="text-decoration: none; display: inline-block;">🛒 COMPRAR COM DESCONTO</a>
                 <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
-                    * A amostra inclui um assunto de Direito Administrativo
+                    * Lembre-se de aplicar o cupom <strong>QUEROSERAPROVADO</strong> no checkout
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- AI Technology Section (Reduced prominence) -->
-    <section class="ai-technology">
-        <div class="ai-container">
-            <h3 class="ai-title">🤖 Desenvolvimento Inteligente</h3>
-            <p>Nosso material é gerado utilizando tecnologia avançada para garantir qualidade e personalização:</p>
-            <div class="ai-features">
-                <div class="ai-feature">
-                    <h4>Análise de Edital</h4>
-                    <p>Análise do edital específico da CEBRASPE</p>
+    <section class="features" id="oportunidade">
+        <div class="features-container">
+            <h2 class="section-title">🏆 Oportunidade Histórica</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, #1E6B4F, #2c8f6f); color: white; padding: 2rem; border-radius: 20px; margin-bottom: 2rem;">
+                    <h3 style="color: #FFD700; font-size: 1.8rem; margin-bottom: 1rem;">Por que este concurso é especial?</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                        <div>
+                            <h4 style="color: #FFD700;">⏰ 9 Anos sem concurso</h4>
+                            <p>Primeira oportunidade desde 2016</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #FFD700;">👥 Baixa Concorrência</h4>
+                            <p>Menos candidatos preparados</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #FFD700;">🏖️ Região dos Lagos</h4>
+                            <p>Qualidade de vida excepcional</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #FFD700;">💰 Excelente Salário</h4>
+                            <p>R$ 2.666,49 + benefícios</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="ai-feature">
-                    <h4>Padrões de Banca</h4>
-                    <p>Identificação de características únicas da CEBRASPE</p>
-                </div>
-                <div class="ai-feature">
-                    <h4>Conteúdo Personalizado</h4>
-                    <p>Material adaptado ao cargo de Agente PF</p>
-                </div>
-                <div class="ai-feature">
-                    <h4>Qualidade Garantida</h4>
-                    <p>Controle de qualidade realizado em 100% do material</p>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 15px; border-left: 4px solid #1E6B4F;">
+                    <h4 style="color: #1E6B4F; margin-bottom: 1rem;">📅 Cronograma Oficial</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                        <div>
+                            <strong>Inscrições:</strong><br>
+                            Até 7/setembro/2025<br>
+                            <span style="color: #666;">Taxa: R$ 80,00</span>
+                        </div>
+                        <div>
+                            <strong>Prova:</strong><br>
+                            19/outubro/2025<br>
+                            <span style="color: #666;">Domingo</span>
+                        </div>
+                        <div>
+                            <strong>Resultado:</strong><br>
+                            16/janeiro/2026<br>
+                            <span style="color: #666;">Nomeação e posse</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Final CTA -->
     <section class="final-cta">
-        <h2>Não perca mais tempo com material genérico</h2>
-        <p>Sua aprovação na Polícia Federal merece uma preparação específica e baseada no padrão real da CEBRASPE.</p>
-        <a href="https://go.hotmart.com/N100386370Y?dp=1" target="_blank" class="cta-button">🚀 GARANTIR MATERIAL</a>
+        <h2>Não perca esta oportunidade histórica!</h2>
+        <p>Depois de 9 anos, Arraial do Cabo abre concurso para Professor. Sua aprovação começa com a preparação certa, baseada no padrão específico da IBAM.</p>
+        <a href="https://go.hotmart.com/O101455802V" onclick="alert('Aplicar cupom QUEROSERAPROVADO no checkout')" class="cta-button">🚀 GARANTIR MATERIAL COM DESCONTO</a>
+        <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-top: 2rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+            <p style="font-size: 1rem; margin: 0;">
+                💡 <strong>Cupom:</strong> QUEROSERAPROVADO<br>
+                💰 <strong>De R$ 49,90 por R$ 39,90</strong>
+            </p>
+        </div>
         <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
             ✅ Acesso imediato | ✅ Suporte especializado | ✅ Pagamento seguro
         </p>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 GARDEN Concursos. Todos os direitos reservados.</p>
-        <p>Concurso: Polícia Federal 2025 - CEBRASPE | Suporte: concursosbr.gd@gmail.com</p>
+        <p>Concurso: Professor Docente II - Arraial do Cabo 2025 - IBAM | Suporte: concursosbr.gd@gmail.com</p>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5522920050871?text=Olá! Quero saber mais sobre o material para Agente da Polícia Federal!" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5522920050871?text=Olá! Quero saber mais sobre o material para Professor Docente II de Arraial do Cabo!" class="whatsapp-float" target="_blank">
         📱
     </a>
 
     <script>
         // Progress bar
         window.addEventListener('scroll', () => {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                progressBar.style.width = scrolled + '%';
+            }
         });
 
         // Countdown timer
         function updateCountdown() {
-            const examDate = new Date('2025-07-27T14:00:00');
+            const examDate = new Date('2025-10-19T14:00:00');
             const now = new Date();
             const distance = examDate - now;
 
@@ -1125,6 +1123,7 @@
 
         // Observe elements
         document.querySelectorAll('.subject-card, .feature-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0'; // Hide elements initially for animation
             observer.observe(el);
         });
 
